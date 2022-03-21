@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE-edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/grid_view.css" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <title>Pokédex</title>
+</head>
+
+<body>
+    <div class="title_container">
+        <img src="assets/img/pokemon_logo.png" class="center">
+    </div>
+    <div class="flex-center">
+        <div class="container">
+            <img src="assets/img/pokedex.png" class="pokedex">
+            <div class="screen_pokemon">
+                <img src="assets/img/pokeball.png" alt="pokeball" id="poke_img" class="poke_image">
+            </div>
+            <div class="search_container">
+                <input type="text" placeholder="Poké Name" id="poke_name" name="poke_name">
+                <button type="button" id="shiny"></button>
+                <button type="button" id="normal"></button>
+                <img src="assets/img/shiny.png" class="img_shiny" style="display: none;">
+                <button type="button" onclick="fetch_pokemon()" class="search_button"></button>
+            </div>
+
+            <div class="pad_container">
+                <button type="button" id="up-button" class="vertical_pad-button siguiente"></button>
+                <button type="button" id="left-button" class="horizontal_pad-button anterior"></button>
+                <button type="button" id="right-button" class="horizontal_pad-button siguiente"></button>
+                <button type="button" id="down-button" class="vertical_pad-button anterior"></button>
+            </div>
+            <div class="info">
+                <label class="info_pokemon">
+                    <div class="basic_info">
+                        <div class="row">
+                            <div class="col-12">
+                                <p id="name"></p>
+                            </div>
+                        </div>
+                        <div class="row" style="text-align: center;">
+                            <div class="col-6">
+                                <p id="atk" class="inline"></p>
+                            </div>
+                            <div class="col-6">
+                                <p id="def" class="inline"></p>
+                            </div>
+                        </div>
+                        <div class="row" style="text-align: center;">
+                            <div class="col-6">
+                                <p id="hp" class="inline"></p>
+                            </div>
+                            <div class="col-6">
+                                <p id="speed" class="inline"></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="abilities" style="display: none;">
+                        <div class="row">
+                            <div class="col-5">
+                                <p class="inline">first:</p>
+                            </div>
+                            <div class="col-7">
+                                <p id="first_ability" class="inline"></p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-5">
+                                <p class="inline">second:</p>
+                            </div>
+                            <div class="col-7">
+                                <p id="second_ability" class="inline"></p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-5">
+                                <p class="inline">hidden:</p>
+                            </div>
+                            <div class="col-7">
+                                <p id="hidden_ability" class="inline"></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="moves" style="display: none;">
+                        <div class="row">
+                            <div class="col-12">
+                                <p id="first_move" class="inline"></p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12">
+                                <p id="second_move" class="inline"></p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12">
+                                <p id="third_move" class="inline"></p>
+                            </div>
+                        </div>
+                    </div>
+                </label>
+                <div class="reset_name">
+                    <button type="button" class="reset_info"></button>
+                    <button type="button" class="reset_info"></button>
+                </div>
+                <div class="abilities_moves">
+                    <button type="button" id="abilities" class="btn_abilities_moves">abilities</button>
+                    <button type="button" id="moves" class="btn_abilities_moves">moves</button>
+                </div>
+                <label class="type">
+                    <p id="type">Type:</p>
+                </label>
+                <label class="type_info">
+                    <p id="type_info"></p>
+                </label>
+            </div>
+        </div>
+    </div>
+</body>
+<footer>
+    <script src="assets/js/pokedex.js"></script>
+</footer>
+
+</html>
