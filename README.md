@@ -1,6 +1,6 @@
 # Práctica Pokédex
 
-###Practica de JavaScript para front-end de LaunchX
+### Practica de JavaScript para front-end de LaunchX
 * Link de pagina publicada: [Pókedex](https://urivan07.github.io/pokedex/)
 
 Captura de la página:
